@@ -1,0 +1,121 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Navbar */
+  header.navbar {
+    background-color: #292b2c;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .nav-links ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .nav-links ul li {
+    margin: 0 1rem;
+  }
+  
+  .nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* User Type Section */
+  .user-type-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #fff;
+  }
+  
+  .user-type-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .user-type-card {
+    background-color: #f9f9f9;
+    width: 30%;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+  }
+  
+  .user-type-card:hover {
+    transform: translateY(-10px);
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .user-type-card h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .user-type-card p {
+    font-size: 1rem;
+  }
+  
+  .auth-section {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .auth-buttons {
+    margin-top: 2rem;
+  }
+  
+  .auth-btn {
+    padding: 1rem 2rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .auth-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  footer {
+    padding: 2rem;
+    background-color: #292b2c;
+    text-align: center;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .user-type-container {
+      flex-direction: column;
+    }
+  
+    .user-type-card {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnoTrack - Select User Type</title>
+  <link rel="stylesheet" href="get.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">InnoTrack</div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- User Type Selection Section -->
+  <section class="user-type-section">
+    <h2>Select Your User Type</h2>
+    <div class="user-type-container">
+      <div class="user-type-card" onclick="redirectToAuth('administrator')">
+        <h3>Administrator</h3>
+        <p>Manage and oversee innovation activities across the institution.</p>
+      </div>
+      <div class="user-type-card" onclick="redirectToAuth('faculty')">
+        <h3>Faculty</h3>
+        <p>Track research and innovation projects and collaborate with students.</p>
+      </div>
+      <div class="user-type-card" onclick="redirectToAuth('student')">
+        <h3>Student</h3>
+        <p>Showcase your innovation achievements and collaborate on projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>Contact Us: info@innotrack.com</p>
+    <p>&copy; 2024 InnoTrack. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Function to handle redirect based on user type
+    function redirectToAuth(userType) {
+      window.location.href = `auth.html?type=${userType}`;
+    }
+  </script>
+</body>
+</html>
