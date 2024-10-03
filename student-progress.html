@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Progress - InnoTrack</title>
+  <link rel="stylesheet" href="std-lan.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">InnoTrack</div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="student-landing.html">Back to Dashboard</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Track Progress Section -->
+  <section class="progress-section">
+    <h2>Track Your Research Progress</h2>
+    <p>Monitor your research progress and feedback through visualizations.</p>
+
+    <div class="progress-visualization">
+      <h3>Heatmap of Innovation Activities</h3>
+      <div id="heatmap"></div>
+    </div>
+
+    <div class="progress-graph">
+      <h3>Student Innovation Progress Graph</h3>
+      <canvas id="progressChart"></canvas>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Heatmap (Example Placeholder)
+    document.getElementById('heatmap').innerHTML = '<img src="heatmap-example.png" alt="Heatmap">';
+
+    // Graph for tracking student progress
+    const ctx = document.getElementById('progressChart').getContext('2d');
+    const progressChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May'],
+        datasets: [{
+          label: 'Progress of Innovation Projects',
+          data: [30, 40, 55, 70, 85],
+          borderColor: 'rgba(75, 192, 192, 1)',
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        }]
+      },
+    });
+  </script>
+</body>
+</html>

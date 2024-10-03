@@ -37,43 +37,11 @@ h2 {
     margin: 20px 0;
 }
 
-.login-section, .signup-section {
-    max-width: 400px;
+.admin-dashboard, .innovation-section, .analytics-section, .manage-users-section {
+    max-width: 1200px;
     margin: 0 auto;
-    background-color: #fff;
     padding: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input, .form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #444;
+    text-align: center;
 }
 
 .dashboard-cards {
@@ -91,6 +59,7 @@ h2 {
     border-radius: 8px;
     flex-basis: 30%;
     text-align: center;
+    cursor: pointer;
 }
 
 .card h3 {
@@ -99,6 +68,34 @@ h2 {
 
 .card p {
     color: #666;
+}
+
+.heatmap-container, .chart-container {
+    margin: 30px 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 20px 0;
+}
+
+ul li {
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+
+ul li button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul li button:hover {
+    background-color: #555;
 }
 
 /* Responsive Design */
@@ -112,5 +109,3 @@ h2 {
         flex-basis: 100%;
     }
 }
-
-  

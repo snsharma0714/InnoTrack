@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnoTrack - Track Innovations</title>
+    <link rel="stylesheet" href="ad-lan.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Heatmap for Innovation Tracking -->
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">InnoTrack</div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="admin-landing.html">Back</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="innovation-section">
+        <h2>Innovation Tracking</h2>
+        <p>Explore ongoing research projects, publications, patents, and more across the institution.</p>
+        
+        <div class="heatmap-container">
+            <canvas id="innovationHeatmap"></canvas>
+        </div>
+
+        <div class="innovation-list">
+            <h3>Ongoing Innovations</h3>
+            <ul>
+                <li><strong>Project A:</strong> A breakthrough in AI for healthcare</li>
+                <li><strong>Publication B:</strong> Machine Learning in Education</li>
+                <li><strong>Patent C:</strong> Solar-powered devices with AI</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        // Heatmap Simulation for tracking innovations
+        const ctx = document.getElementById('innovationHeatmap').getContext('2d');
+        const innovationHeatmap = new Chart(ctx, {
+            type: 'heatmap',
+            data: {
+                labels: ['Department 1', 'Department 2', 'Department 3', 'Department 4'],
+                datasets: [{
+                    label: 'Innovations',
+                    data: [20, 15, 30, 10],
+                    backgroundColor: ['rgba(255,99,132,0.2)', 'rgba(54,162,235,0.2)', 'rgba(255,206,86,0.2)', 'rgba(75,192,192,0.2)']
+                }]
+            },
+            options: {
+                scales: {
+                    x: { title: { display: true, text: 'Departments' } },
+                    y: { title: { display: true, text: 'Number of Innovations' } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

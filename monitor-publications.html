@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitor Publications</title>
+  <link rel="stylesheet" href="mon-pub.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">InnoTrack</div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="faculty-landing.html">Back to Dashboard</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Publications Section -->
+  <section class="publications-section">
+    <h2>Monitor Publications</h2>
+    <p>Explore and monitor all publications from various departments in real time.</p>
+
+    <!-- Filter Options -->
+    <div class="filter-options">
+      <label for="publication-type">Filter by Type:</label>
+      <select id="publication-type">
+        <option value="all">All</option>
+        <option value="journal">Journal Articles</option>
+        <option value="conference">Conference Papers</option>
+        <option value="book">Books</option>
+      </select>
+
+      <label for="year">Filter by Year:</label>
+      <select id="year">
+        <option value="all">All</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+      </select>
+    </div>
+
+    <!-- Publications List -->
+    <div class="publication-list">
+      <div class="publication-card">
+        <h3>Deep Learning for Healthcare</h3>
+        <p>Journal: AI in Medicine, 2023</p>
+        <button onclick="window.location.href='publication-detail.html?publication=1'">View Details</button>
+      </div>
+
+      <div class="publication-card">
+        <h3>Quantum Computing in Cryptography</h3>
+        <p>Conference: ICAC, 2024</p>
+        <button onclick="window.location.href='publication-detail.html?publication=2'">View Details</button>
+      </div>
+
+      <!-- More publications -->
+    </div>
+  </section>
+
+  <script>
+    // Add filter functionality if needed
+  </script>
+</body>
+</html>

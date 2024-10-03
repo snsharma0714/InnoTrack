@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard - InnoTrack</title>
+  <link rel="stylesheet" href="std-lan.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">InnoTrack</div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="student-showcase.html">Showcase Achievements</a></li>
+        <li><a href="student-progress.html">Track Progress</a></li>
+        <li><a href="student-collaborate.html">Collaborate</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Student Dashboard -->
+  <section class="dashboard-section">
+    <h1>Welcome to Your Student Dashboard</h1>
+    <p>Explore and manage your projects, achievements, and collaborations.</p>
+
+    <div class="dashboard-cards">
+      <div class="card" onclick="window.location.href='student-showcase.html'">
+        <h3>Showcase Achievements</h3>
+        <p>Upload and display your innovative projects and awards.</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='student-progress.html'">
+        <h3>Track Progress</h3>
+        <p>Keep track of your research progress and receive feedback.</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='student-collaborate.html'">
+        <h3>Collaborate</h3>
+        <p>Work with students and faculty to advance your projects.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+

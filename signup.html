@@ -1,70 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InnoTrack - Sign Up</title>
-  <link rel="stylesheet" href="logsin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnoTrack - Sign Up</title>
+    <link rel="stylesheet" href="logsin.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">InnoTrack</div>
-    <nav class="nav-links">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="navbar">
+        <div class="logo">InnoTrack</div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Signup Section -->
-  <section class="signup-section">
-    <h2>Sign Up</h2>
-    <form class="signup-form" onsubmit="handleSignup(event)">
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Create a password" required>
-      </div>
-      <div class="form-group">
-        <label for="user-type">User Type</label>
-        <select id="user-type" required>
-          <option value="">Select User Type</option>
-          <option value="administrator">Administrator</option>
-          <option value="faculty">Faculty</option>
-          <option value="student">Student</option>
-        </select>
-      </div>
-      <button type="submit" class="btn">Sign Up</button>
-    </form>
-  </section>
+    <section class="signup-section">
+        <h2>Sign Up</h2>
+        <form class="signup-form" onsubmit="handleSignup(event)">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Create a password" required>
+            </div>
+            <div class="form-group">
+                <label for="user-type">Sign up as</label>
+                <select id="user-type" required>
+                    <option value="">Select User Type</option>
+                    <option value="administrator">Administrator</option>
+                    <option value="faculty">Faculty</option>
+                    <option value="student">Student</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+    </section>
 
-  <script>
-    function handleSignup(event) {
-      event.preventDefault();
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-      const userType = document.getElementById('user-type').value;
+    <script>
+        function handleSignup(event) {
+            event.preventDefault();
+            const userType = document.getElementById('user-type').value;
 
-      if (userType === 'administrator') {
-        window.location.href = 'admin-dashboard.html';
-      } else if (userType === 'faculty') {
-        window.location.href = 'faculty-dashboard.html';
-      } else if (userType === 'student') {
-        window.location.href = 'student-dashboard.html';
-      } else {
-        alert('Please select a valid user type!');
-      }
-    }
-  </script>
+            if (userType === 'administrator') {
+                window.location.href = 'admin-landing.html';
+            } else if (userType === 'faculty') {
+                window.location.href = 'faculty-landing.html';
+            } else if (userType === 'student') {
+                window.location.href = 'student-landing.html';
+            } else {
+                alert('Please select a valid user type.');
+            }
+        }
+    </script>
 </body>
 </html>
+

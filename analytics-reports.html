@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnoTrack - Analytics & Reports</title>
+    <link rel="stylesheet" href="ad-lan.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For data visualization -->
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">InnoTrack</div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="admin-landing.html">Back</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="analytics-section">
+        <h2>Analytics & Reports</h2>
+        <p>Get insights into innovation activities with real-time data visualization.</p>
+        
+        <div class="chart-container">
+            <canvas id="innovationChart"></canvas>
+        </div>
+
+        <div class="report-summary">
+            <h3>Latest Reports</h3>
+            <ul>
+                <li>Innovation Activity Report - Q1</li>
+                <li>Faculty Collaboration Analysis</li>
+                <li>Top Innovations and Patents - 2024</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        const chartCtx = document.getElementById('innovationChart').getContext('2d');
+        const innovationChart = new Chart(chartCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Research Projects', 'Publications', 'Patents'],
+                datasets: [{
+                    label: 'Number of Innovations',
+                    data: [50, 30, 20],
+                    backgroundColor: ['rgba(75,192,192,0.6)', 'rgba(153,102,255,0.6)', 'rgba(255,159,64,0.6)']
+                }]
+            },
+            options: {
+                scales: {
+                    x: { title: { display: true, text: 'Innovation Type' } },
+                    y: { title: { display: true, text: 'Count' } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

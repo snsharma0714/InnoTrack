@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Innovations</title>
+  <link rel="stylesheet" href="fa-ln.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For graph visualization -->
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">InnoTrack</div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="faculty-landing.html">Back to Dashboard</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Student Innovations Section -->
+  <section class="innovations-section">
+    <h2>Student Innovations & Achievements</h2>
+    <p>Explore cutting-edge innovations and achievements by students.</p>
+
+    <div class="innovation-list">
+      <div class="innovation-card">
+        <h3>Smart Energy Grid</h3>
+        <p>A student-led project on smart grid solutions using renewable energy.</p>
+        <button onclick="window.location.href='innovation-detail.html?project=3'">View Details</button>
+      </div>
+
+      <div class="innovation-card">
+        <h3>AR Learning Experience</h3>
+        <p>Augmented Reality-based learning tools for better student engagement.</p>
+        <button onclick="window.location.href='innovation-detail.html?project=4'">View Details</button>
+      </div>
+      <!-- Add more student innovations here -->
+    </div>
+
+    <!-- Graph Visualization -->
+    <h3>Innovation Progress Across Institution</h3>
+    <canvas id="innovationChart"></canvas>
+
+    <script>
+      const ctx = document.getElementById('innovationChart').getContext('2d');
+      const innovationChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+          datasets: [{
+            label: 'Student Innovations',
+            data: [12, 19, 13, 15, 22, 30, 25, 28, 35, 40],
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
+  </section>
+</body>
+</html>

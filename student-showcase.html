@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Showcase Achievements - InnoTrack</title>
+  <link rel="stylesheet" href="std-lan.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">InnoTrack</div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="student-landing.html">Back to Dashboard</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Showcase Achievements Section -->
+  <section class="showcase-section">
+    <h2>Upload Your Achievements</h2>
+    <p>Showcase your innovative projects, awards, and accomplishments.</p>
+
+    <form action="upload-achievement" method="post" enctype="multipart/form-data">
+      <label for="project-title">Project Title:</label>
+      <input type="text" id="project-title" name="project-title" required>
+
+      <label for="project-description">Project Description:</label>
+      <textarea id="project-description" name="project-description" rows="5" required></textarea>
+
+      <label for="award">Upload Awards/Certifications:</label>
+      <input type="file" id="award" name="award" accept=".pdf,.jpg,.png">
+
+      <label for="project-file">Upload Project Files:</label>
+      <input type="file" id="project-file" name="project-file" accept=".zip,.rar,.pdf,.docx">
+
+      <button type="submit">Submit Achievement</button>
+    </form>
+
+    <!-- Display Achievements -->
+    <div class="achievement-list">
+      <h3>Your Uploaded Projects</h3>
+      <!-- List of uploaded projects -->
+      <div class="achievement-card">
+        <h4>AI-Based Medical Diagnosis</h4>
+        <p>Award: Best Research Project 2024</p>
+        <p>Project Description: AI system developed to assist doctors in diagnosis.</p>
+      </div>
+
+      <!-- More projects... -->
+    </div>
+  </section>
+</body>
+</html>

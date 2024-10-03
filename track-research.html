@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Research Projects</title>
+  <link rel="stylesheet" href="fa-ln.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">InnoTrack</div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="faculty-landing.html">Back to Dashboard</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Research Projects -->
+  <section class="projects-section">
+    <h2>Research Projects</h2>
+    <p>Monitor the progress of ongoing research projects and collaborate with colleagues.</p>
+
+    <div class="project-list">
+      <div class="project-card">
+        <h3>AI-Powered Healthcare</h3>
+        <p>A project focused on using AI to improve diagnostic accuracy.</p>
+        <button onclick="window.location.href='project-detail.html?project=1'">View Details</button>
+        <button onclick="collaborate()">Collaborate</button>
+      </div>
+
+      <div class="project-card">
+        <h3>Blockchain for Education</h3>
+        <p>Exploring blockchain for secure student records.</p>
+        <button onclick="window.location.href='project-detail.html?project=2'">View Details</button>
+        <button onclick="collaborate()">Collaborate</button>
+      </div>
+
+      <!-- Add more projects as necessary -->
+    </div>
+  </section>
+
+  <script>
+    function collaborate() {
+      alert("Collaboration feature coming soon!");
+    }
+  </script>
+</body>
+</html>
